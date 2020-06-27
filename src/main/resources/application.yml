@@ -1,0 +1,14 @@
+spring:
+  redis:
+    #地址
+    host: localhost
+    #端口
+    port: 6379
+  kafka:
+    producer:
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+      properties:
+        spring.json.type.mapping:
+          foo:com.swust.netty_redis_kafka.kafka.common.Foo1,
+          bar:com.swust.netty_redis_kafka.kafka.common.Bar1,
+          position:com.swust.netty_redis_kafka.entity.Position
